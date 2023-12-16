@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Occupancy Prediction</title>
+    <link rel="stylesheet" href="/staticFiles/style.css">
+</head>
+<body>
+    <div>
+        <form action="{{url_for('predict')}}" method="post">
+            <h1 align="center">University Prediction</h1>
+        <div>
+            <label for="GRE Score">GRE Score:</label>
+            <input type="text" id="GRE Score" name="GRE Score">
+        </div>
+        <div>
+            <label for="TOEFL Score">TOEFL Score:</label>
+            <input type="text" id="TOEFL Score" name="TOEFL Score">
+        </div>
+        <div>    
+            <label for="University Rating">University Rating:</label>
+            <input type="text" id="University Rating" name="University Rating">
+        </div>
+        <div>
+            <label for="SOP">SOP:</label>
+            <input type="text" id="SOP" name="SOP">
+        </div>
+        <div>
+            <label for="LOR">LOR:</label>
+            <input type="text" id="LOR" name="LOR">
+        </div>
+        <div>
+            <label for="CGPA">CGPA Ratio:</label>
+            <input type="text" id="CGPA" name="CGPA">
+        </div>
+        <div>
+            <label for="Research">Research:</label>
+            <input type="text" id="Research" name="Research">
+        </div>
+
+
+            <br><br>
+            <center> <button type="submit" id="sub">Prediction</button> </center>
+
+        </form>
+
+        <br><br>
+        {{Prediction_Text}}
+    </div>
+</body>
+</html>
